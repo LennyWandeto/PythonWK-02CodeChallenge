@@ -18,8 +18,6 @@ def main():
     # Connect to the database
     conn = get_db_connection()
     cursor = conn.cursor()
-
-
     '''
         The following is just for testing purposes, 
         you can modify it to meet the requirements of your implmentation.
@@ -65,6 +63,9 @@ def main():
     print("\nArticles:")
     for article in articles:
         print(Article(article["id"], article["title"], article["content"], article["author_id"], article["magazine_id"]))
+        break
+    
+    
 
 if __name__ == "__main__":
     main()
